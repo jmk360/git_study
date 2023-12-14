@@ -40,6 +40,8 @@
     # 단, 나 혼자 사용하는 pc에서만 사용해야한다. 협업하는 pc에서 사용할 경우, 해킹 당할 수 있다.
     git config --global credential.helper store
 
+    # >>>>>>>>>>>>>>>>>>>> 기본 editor 변경하는 설정 추가하기
+
     # git alias 등록
     git config --global alias.gl "log --all --decorate --graph --oneline"
     git config --global alias.glf "log --graph --all --pretty=format:'%C(yellow) %h %C(reset)%C(blue)%ad%C(reset) : %C(white)%s %C(bold green)-- %an%C(reset) %C(bold red)%d%C(reset)'"
@@ -58,7 +60,7 @@
     git config --global alias.gl
     git config --global alias.glf
     ```
-    2. git config의 확인 및 수정이 가능하다.
+    2. git config를 editer를 통해서 확인 및 수정, 삭제가 가능하다.
     ```bash
     git config --global --edit
     ```
@@ -66,7 +68,7 @@
     ```bash
     git config --global -e
     ```
-    3. .gitconfig 파일을 통해 확인 및 수정이 가능하다.
+    3. .gitconfig 파일을 통해 확인 및 수정, 삭제가 가능하다.
     - Windows인 경우: 사용자 계정 폴더 하위의 .gitconfig 파일을 확인한다.
     - Linux인 경우: $HOME 폴더 하위의 .gitconfig 파일을 확인한다.
 
@@ -87,3 +89,15 @@
 ## 4. git config --global core.autocrlf 설정에 대해서
 
 ## 5. git config --global credential.helper 설정에 대해서
+
+## 6. 프로젝트 생성 & Git 관리 시작
+git에서 관리하고자 하는 프로젝트 폴더 하위에서 아래 명령어를 수행한다.
+```bash
+git init
+```
+위 명령어를 수행하면, 프로젝트 폴더 하위에 .git(local repository)가 생성된다.
+.git 폴더를 삭제하면, git 관리내역이 삭제된다.(현 파일들은 유지)
+최신 커밋상태에서 뭔가 변화가 생기면, 아래 명령어를 통해서 변화 상황을 확인할 수 있다.
+```bash
+git status
+```
