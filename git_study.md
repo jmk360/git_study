@@ -210,7 +210,26 @@ git editor 설정을 따로 하지 않았다면 기본으로 vi로 진입을 할
 git commit -m "First commit"
 ```
 
+add와 commit 한꺼번에 하기
+```bash
+git commit -am "(메시지)"
+```
+새로 생성된(untracked) 파일이 없을때 사용 가능하다. untracked 파일이 있는 경우라면 add를 먼저 하고 commit을 진행하여야 한다.
+
+
 커밋 내역 확인하기
 ```bash
-git log
+git log # 커밋 내역을 확인할 수 있다.
+git log -p # 커밋의 변경사항도 확인할 수 있다.
 ```
+
+## 10. 과거로 돌아가는 두 가지 방법
+
+1. reset: 원하는 시점의 커밋으로 돌아간 뒤 이후 내역들을 지운다.
+2. revert: 되돌리기 원하는 시점의 커밋의 변경사항을 역으로 적용하는 커밋을 만든다.
+    
+    -> 경우에 따라서는 충돌이 발생할 수도 있다.
+
+## 11. reset
+
+## 12. revert
